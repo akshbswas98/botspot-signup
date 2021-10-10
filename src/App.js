@@ -1,15 +1,18 @@
 import './App.css';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
+import { Button,Form } from 'react-bootstrap';
 function App() {
+ 
+  const [validated, setValidated] = useState(false);
+ 
   const onSubmit = data => console.log(data);
   const [loginState, setLoginState] = useState({
     email:"",
     password:"",
     checkMeOut:false,
   });
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {  handleSubmit, formState: {  } } = useForm();
   return (
   
 
@@ -64,6 +67,7 @@ function App() {
         </div>
         <button type="submit" class="btn btn-primary" disabled={
           !loginState.email || !loginState.password}>Submit</button>
+        
       </form>
       <footer>
     
