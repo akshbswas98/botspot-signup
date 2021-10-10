@@ -1,18 +1,17 @@
 import './App.css';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Button,Form } from 'react-bootstrap';
+
+// import { Button,Form } from 'react-bootstrap';
 function App() {
  
-  const [validated, setValidated] = useState(false);
+  
  
-  const onSubmit = data => console.log(data);
   const [loginState, setLoginState] = useState({
     email:"",
     password:"",
     checkMeOut:false,
   });
-  const {  handleSubmit, formState: {  } } = useForm();
+  
   return (
   
 
@@ -24,7 +23,7 @@ function App() {
           Email address
           </label>
           <input 
-          onSubmit={handleSubmit(onSubmit)}
+         
           
           type="email" 
           className="form-control " 
